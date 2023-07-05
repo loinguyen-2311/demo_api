@@ -49,3 +49,5 @@ end
 # my gem
 gem 'devise'
 gem 'simple_token_authentication'
+# login fb
+gem 'koala'
