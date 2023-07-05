@@ -46,3 +46,6 @@ group :development do
   # gem "spring"
 end
 
+# my gem
+gem 'devise'
+gem 'simple_token_authentication'
