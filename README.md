@@ -1,11 +1,23 @@
-# README
+# Something I do with API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gems:
 
-Things you may want to cover:
+* Devise
+* Faker
+* Simple_token_authentication
+* Koala
+* Database_cleaner
+* Dotenv-rails
 
-* Ruby version
+Database: PostpreSQL
+
+Tasks:
+
+* Authentication and Authorization 
+* Login in with facebook account
+* CRUD review books
+* Fake database 
+* Create simple token
 
 * System dependencies
 
@@ -22,5 +34,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
 # facebook_api
+
 # facebook_api

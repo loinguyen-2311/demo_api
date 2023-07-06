@@ -54,3 +54,4 @@ gem 'koala'
 # cai dat uuid la mac dinh cho id
 gem 'database_cleaner'
 gem 'faker'
+gem 'dotenv-rails'
