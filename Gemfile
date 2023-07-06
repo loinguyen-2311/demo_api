@@ -51,3 +51,6 @@ gem 'devise'
 gem 'simple_token_authentication'
 # login fb
 gem 'koala'
+# cai dat uuid la mac dinh cho id
+gem 'database_cleaner'
+gem 'faker'
