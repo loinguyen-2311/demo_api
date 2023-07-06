@@ -13,11 +13,8 @@ class Api::V1::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     user = User.new user_params
-    if user.save
-      json_response "Signed Up successfully", true, {user: user}, :ok
-    else
-      json_response "Something wrong", false, {}, :unprocessable_entity
-    end
+    return json_response "Signed Up successfully", true, { user: user }, :ok if user.save
+    json_response "Something wrong", false, {}, :unprocessable_entity
   end
 
   # GET /resource/edit
@@ -65,7 +62,9 @@ class Api::V1::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
   private
+
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end

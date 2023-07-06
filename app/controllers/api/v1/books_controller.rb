@@ -13,8 +13,8 @@ class Api::V1::BooksController < ApplicationController
   private
 
   def load_book
-    @book = Book.find_by id: params[:book_id]
-    # params[:book_id] nhận từ url
+    @book = Book.find_by id: params[:id]
+    # params[:id] nhận từ url
     json_response "Cannot get book", false, {}, :not_found unless @book
   end
 end
