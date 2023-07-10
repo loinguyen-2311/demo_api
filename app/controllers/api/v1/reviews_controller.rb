@@ -6,24 +6,24 @@ class Api::V1::ReviewsController < ApplicationController
 
   def index
     @reviews = @book.reviews
-    json_response "Index reviews successfully", true, { reviews: @reviews }, :ok
+    json_response "Index reviews successfully", true, { reviews: parse_json(@reviews) }, :ok
   end
 
   def show
-    json_response "Show reviews successfully", true, { reviews: @review }, :ok
+    json_response "Show reviews successfully", true, { reviews: parse_json(@review) }, :ok
   end
 
   def create
     review = Review.new review_params
     review.user_id = current_user.id
     review.book_id = params[:book_id]
-    return json_response "Created review successfully", true, { review: review }, :ok if review.save
+    return json_response "Created review successfully", true, { review: parse_json(review) }, :ok if review.save
     json_response "Created review fail", fale, {}, :unproccessable_entity
   end
 
   def update
     if correct_user @review.user
-      return json_response "Updated review successfully", true, { review: @review }, :ok if @review.update review_params
+      return json_response "Updated review successfully", true, { review: parse_json(@review) }, :ok if @review.update review_params
       return json_response "Updated review fail", false, {}, :unproccessable_entity
     end
     json_response "You dont have permission to do this", false, {}, :unauthorized
