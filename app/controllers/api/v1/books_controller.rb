@@ -3,6 +3,7 @@ class Api::V1::BooksController < ApplicationController
 
   def index
     @books = Book.all
+    #eager load ==> .includes(:reviews)
     json_response "Index books successfully", true, { books: @books }, :ok
   end
 

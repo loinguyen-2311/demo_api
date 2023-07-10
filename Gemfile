@@ -58,3 +58,5 @@ gem 'dotenv-rails'
 gem 'active_model_serializers'
 # gem 'counter_culture'
 # muc dich la de load cache
+#tranh n+1
+gem 'bullet'
