@@ -60,3 +60,6 @@ gem 'active_model_serializers'
 # muc dich la de load cache
 #tranh n+1
 gem 'bullet'
+
+# install nay truoc sudo apt-get install imagemagick -y, upload anh
+# gem "paperclip"

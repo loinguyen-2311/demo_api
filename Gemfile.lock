@@ -82,6 +82,7 @@ GEM
       uniform_notifier (~> 1.11)
     case_transform (0.2)
       activesupport
+    climate_control (0.2.0)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     database_cleaner (2.0.2)
@@ -138,6 +139,12 @@ GEM
       net-smtp
     marcel (1.0.2)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2023.0218.1)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.1.2)
     minitest (5.18.1)
     msgpack (1.7.1)
@@ -155,6 +162,12 @@ GEM
     nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    paperclip (6.1.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      mime-types
+      mimemagic (~> 0.3.0)
+      terrapin (~> 0.6.0)
     pg (1.4.6)
     public_suffix (5.0.1)
     puma (5.6.6)
@@ -204,6 +217,8 @@ GEM
       actionmailer (>= 3.2.6, < 8)
       actionpack (>= 3.2.6, < 8)
       devise (>= 3.2, < 6)
+    terrapin (0.6.0)
+      climate_control (>= 0.0.3, < 1.0)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -229,6 +244,7 @@ DEPENDENCIES
   dotenv-rails
   faker
   koala
+  paperclip
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
