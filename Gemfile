@@ -63,3 +63,4 @@ gem 'bullet'
 
 # install nay truoc sudo apt-get install imagemagick -y, upload anh
 # gem "paperclip"
+gem 'ruby-kafka'

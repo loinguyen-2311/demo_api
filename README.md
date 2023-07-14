@@ -10,6 +10,7 @@ Gems:
 * Dotenv-rails
 * Active_model_serializers
 * Counter_culture
+* Kafka
 
 Database: PostpreSQL
 
@@ -21,3 +22,4 @@ Tasks:
 * Fake database 
 * Create simple token
 * Config response
+* Produce and consume messages with kafka
