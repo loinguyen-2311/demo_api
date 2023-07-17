@@ -1,8 +1,10 @@
+require "kafka"
 class Kafka::KafkaBase
   # rails runner Kafka::KafkaBase.new.consumer
   # consumer chỉ lấy message được tạo ra sau khi nó được kích hoạt
   def consumer
     kafka = Kafka.new("broker.fxce-kafka-dev.vncdevs.com:31091")
+    # Consumers with the same group id will form a Consumer Group together.
     consumer = kafka.consumer(group_id: 'fxce-loi-nguyen')
     consumer.subscribe('fxce-loi-nguyen')
     consumer.each_message do |message|
