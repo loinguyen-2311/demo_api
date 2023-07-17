@@ -12,6 +12,7 @@ Gems:
 * Counter_culture
 * Kafka
 * Rmagick && Chunky_png
+* Better_errors
 
 Database: PostpreSQL
 

@@ -72,3 +72,6 @@ gem 'chunky_png'
 # sudo apt update
 # sudo apt install imagemagick libmagickwand-dev
 gem 'rmagick'
+
+#show errors in beauty
+gem 'better_errors', '~> 2.9'
