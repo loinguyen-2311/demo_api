@@ -11,6 +11,7 @@ Gems:
 * Active_model_serializers
 * Counter_culture
 * Kafka
+* Rmagick && Chunky_png
 
 Database: PostpreSQL
 
@@ -22,4 +23,5 @@ Tasks:
 * Fake database 
 * Create simple token
 * Config response
-* Produce and consume messages with kafka
+* Service object: produce and consume messages with kafka
+* Change text into image

@@ -64,3 +64,11 @@ gem 'bullet'
 # install nay truoc sudo apt-get install imagemagick -y, upload anh
 # gem "paperclip"
 gem 'ruby-kafka'
+
+#content to image
+gem 'chunky_png'
+
+# install before install gem rmagick
+# sudo apt update
+# sudo apt install imagemagick libmagickwand-dev
+gem 'rmagick'
