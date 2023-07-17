@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-
+  require 'chunky_png'
+  require 'rmagick'
   def facebook
     if params[:facebook_access_token]
       # lay access token bang link https://developers.facebook.com/tools/explorer
@@ -28,6 +29,35 @@ class Api::V1::UsersController < ApplicationController
     else
       json_response "Missing facebook access token", false, {}, :unprocessable_entity
     end
+  end
+
+  def text_to_image
+    text = params[:text]
+    font_size = 24
+    font_path = Rails.root.join('app/assets/fonts/arial.ttf')
+    color = 'red'
+
+    # Tạo một đối tượng Magick::Image với kích thước hình ảnh mong muốn
+    image = Magick::Image.new(400, 200) { |img| img.background_color = 'yellow' }
+
+    # Tạo một đối tượng Magick::Draw để vẽ nội dung text lên hình ảnh
+    draw = Magick::Draw.new
+    draw.font = font_path.to_s
+    draw.pointsize = font_size
+    draw.fill = color
+    draw.gravity = Magick::CenterGravity
+
+    # Vẽ nội dung text lên hình ảnh
+    draw.text(0, 0, text)
+    draw.draw(image)
+
+    # Lưu hình ảnh vào file
+    image_first = SecureRandom.alphanumeric(16).downcase
+    image_path = Rails.root.join('public', 'images', "#{image_first}.png")
+    image.write(image_path)
+
+    # Trả về đường dẫn đến hình ảnh để có thể sử dụng trong view hoặc gửi lại cho client
+    render json: { image_url: "/images/#{image_first}.png" }
   end
 
 end

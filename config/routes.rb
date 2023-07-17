@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         delete "log_out", to: "sessions#destroy"
       end
       post "facebook", to: "users#facebook"
+      post "to_image", to: 'users#text_to_image'
       resources :books ,only: [:index , :show] do
         resources :reviews, only: [:index, :show, :update, :destroy, :create]
       end

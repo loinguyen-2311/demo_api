@@ -82,6 +82,7 @@ GEM
       uniform_notifier (~> 1.11)
     case_transform (0.2)
       activesupport
+    chunky_png (1.4.0)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     database_cleaner (2.0.2)
@@ -158,6 +159,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.6)
+    pkg-config (1.5.2)
     public_suffix (5.0.1)
     puma (5.6.6)
       nio4r (~> 2.0)
@@ -201,6 +203,8 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
+    rmagick (5.2.0)
+      pkg-config (~> 1.4)
     ruby-kafka (1.5.0)
       digest-crc
     ruby2_keywords (0.0.5)
@@ -227,6 +231,7 @@ DEPENDENCIES
   active_model_serializers
   bootsnap
   bullet
+  chunky_png
   database_cleaner
   debug
   devise
@@ -237,6 +242,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.5, >= 7.0.5.1)
+  rmagick
   ruby-kafka
   simple_token_authentication
   tzinfo-data
