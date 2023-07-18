@@ -78,4 +78,5 @@ class Api::V1::UsersController < ApplicationController
 
     render json: { image_path: custom_path.to_s }
   end
+
 end
