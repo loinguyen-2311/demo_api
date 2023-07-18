@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       end
       post "facebook", to: "users#facebook"
       post "to_image", to: 'users#text_to_image'
+      get 'generate_image', to: 'users#generate_image'
       resources :books ,only: [:index , :show] do
         resources :reviews, only: [:index, :show, :update, :destroy, :create]
       end

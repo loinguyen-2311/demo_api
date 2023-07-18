@@ -60,4 +60,22 @@ class Api::V1::UsersController < ApplicationController
     render json: { image_url: "/images/#{image_first}.png" }
   end
 
+  def generate_image
+    @var = "123"
+    html = "<p>Your HTML code goes here #{@var}</p>"
+
+    imgkit = IMGKit.new(html)
+    image = imgkit.to_img(:png)
+    image_first = SecureRandom.alphanumeric(16).downcase
+
+    # Chỉ định đường dẫn tệp tin cụ thể
+    custom_path = Rails.root.join('public', 'images', "#{image_first}.png")
+
+    File.open(custom_path, 'wb') do |file|
+      file.binmode
+      file.write(image)
+    end
+
+    render json: { image_path: custom_path.to_s }
+  end
 end
