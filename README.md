@@ -12,6 +12,7 @@ Gems:
 * Counter_culture
 * Kafka
 * Rmagick && Chunky_png
+* Imgkit && Wkhtmltoimage-binary '0.11.0.1.1'
 * Better_errors
 
 Database: PostpreSQL
@@ -26,3 +27,4 @@ Tasks:
 * Config response
 * Service object: produce and consume messages with kafka
 * Change text into image
+* Change html with variables to image

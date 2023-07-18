@@ -67,7 +67,6 @@ gem 'ruby-kafka'
 
 #content to image
 gem 'chunky_png'
-
 # install before install gem rmagick
 # sudo apt update
 # sudo apt install imagemagick libmagickwand-dev
@@ -75,3 +74,8 @@ gem 'rmagick'
 
 #show errors in beauty
 gem 'better_errors', '~> 2.9'
+
+# html to image with variable
+# download and setup before use gem https://wkhtmltopdf.org/downloads.html
+gem 'imgkit'
+gem 'wkhtmltoimage-binary', '0.11.0.1.1'
