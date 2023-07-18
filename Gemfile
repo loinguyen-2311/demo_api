@@ -79,3 +79,7 @@ gem 'better_errors', '~> 2.9'
 # download and setup before use gem https://wkhtmltopdf.org/downloads.html
 gem 'imgkit'
 gem 'wkhtmltoimage-binary', '0.11.0.1.1'
+
+gem 'httparty'
+gem 'sentry-raven'
+
