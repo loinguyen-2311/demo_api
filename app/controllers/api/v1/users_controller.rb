@@ -78,5 +78,33 @@ class Api::V1::UsersController < ApplicationController
 
     render json: { image_path: custom_path.to_s }
   end
-
+  # def generate_image
+  #   @var = "123"
+  #   html = <<-HTML
+  #   <style>
+  #     /* Chèn các quy tắc CSS tùy chỉnh ở đây */
+  #     body {
+  #       font-family: Arial, sans-serif;
+  #       background-color: #f0f0f0;
+  #     }
+  #     p {
+  #       color: #ff0000;
+  #     }
+  #   </style>
+  #   <p>Your HTML code goes here #{@var}</p>
+  #   HTML
+  #
+  #   imgkit = IMGKit.new(html)
+  #   image = imgkit.to_img(:png)
+  #
+  #   # Chỉ định đường dẫn tệp tin cụ thể
+  #   custom_path = Rails.root.join('public', 'images', 'custom_image.png')
+  #
+  #   File.open(custom_path, 'wb') do |file|
+  #     file.binmode
+  #     file.write(image)
+  #   end
+  #
+  #   render json: { image_path: custom_path.to_s }
+  # end
 end
