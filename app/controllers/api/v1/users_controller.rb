@@ -62,7 +62,19 @@ class Api::V1::UsersController < ApplicationController
 
   def generate_image
     @var = "123"
-    html = "<p>Your HTML code goes here #{@var}</p>"
+    html = <<-HTML
+    <style>
+      /* Chèn các quy tắc CSS tùy chỉnh ở đây */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #yellow;
+      }
+      p {
+        color: #ff0000;
+      }
+    </style>
+    <p>Your HTML code goes here #{@var}</p>
+    HTML
 
     imgkit = IMGKit.new(html)
     image = imgkit.to_img(:png)
