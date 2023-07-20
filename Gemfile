@@ -80,6 +80,10 @@ gem 'better_errors', '~> 2.9'
 gem 'imgkit'
 gem 'wkhtmltoimage-binary', '0.11.0.1.1'
 
+#telegram post use api
 gem 'httparty'
 gem 'sentry-raven'
 
+#sentry to take errors
+gem 'sentry-ruby'
+gem 'sentry-rails'
