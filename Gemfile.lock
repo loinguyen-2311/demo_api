@@ -219,8 +219,13 @@ GEM
     ruby-kafka (1.5.0)
       digest-crc
     ruby2_keywords (0.0.5)
+    sentry-rails (5.10.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.10.0)
     sentry-raven (3.1.2)
       faraday (>= 1.0)
+    sentry-ruby (5.10.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     simple_token_authentication (1.18.1)
       actionmailer (>= 3.2.6, < 8)
       actionpack (>= 3.2.6, < 8)
@@ -261,7 +266,9 @@ DEPENDENCIES
   rails (~> 7.0.5, >= 7.0.5.1)
   rmagick
   ruby-kafka
+  sentry-rails
   sentry-raven
+  sentry-ruby
   simple_token_authentication
   tzinfo-data
   wkhtmltoimage-binary (= 0.11.0.1.1)
