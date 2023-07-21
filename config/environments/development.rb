@@ -28,6 +28,11 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
+    config.after_initialize do
+      Bullet.enable = true
+      Bullet.bullet_logger = true
+      Bullet.raise = true # Nếu muốn Bullet raise exception khi phát hiện vấn đề không tối ưu
+    end
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).

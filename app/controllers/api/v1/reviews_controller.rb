@@ -1,12 +1,21 @@
 class Api::V1::ReviewsController < ApplicationController
 
-  before_action :load_book, only: :index
+  # before_action :load_book, only: :index
   before_action :load_review, only: [:show, :update, :destroy]
   before_action :authenticate_with_token!, only: [:create, :update, :destroy]
 
   def index
-    @reviews = @book.reviews
-    json_response "Index reviews successfully", true, { reviews: parse_json(@reviews) }, :ok
+    # Ví dụ truy vấn ban đầu (N+1 Query)
+    @reviews = Review.all
+
+    # Vòng lặp để truy vấn thông tin user và book của từng review
+    @reviews.each do |review|
+      puts review.user.email
+      puts review.book.title
+    end
+
+    # @reviews = @book.reviews
+    # json_response "Index reviews successfully", true, { reviews: parse_json(@reviews) }, :ok
   end
 
   def show

@@ -15,6 +15,7 @@ Gems:
 * Imgkit && Wkhtmltoimage-binary '0.11.0.1.1'
 * Better_errors
 * Httparty && Sentry-raven
+* Sentry-ruby && Sentry-rails
 
 Database: PostpreSQL
 
@@ -30,4 +31,4 @@ Tasks:
 * Change text into image
 * Change html with variables to image
 * Telegram bot
-
+* Sentry to log errors
