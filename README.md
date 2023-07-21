@@ -16,6 +16,8 @@ Gems:
 * Better_errors
 * Httparty && Sentry-raven
 * Sentry-ruby && Sentry-rails
+* Bullet
+* 
 
 Database: PostpreSQL
 
@@ -32,3 +34,5 @@ Tasks:
 * Change html with variables to image
 * Telegram bot
 * Sentry to log errors
+* Controll N+1 query
+* 
